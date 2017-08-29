@@ -1,0 +1,49 @@
+{% extends 'layout_full.html' %}
+
+
+{% block base_title %}
+{{release.repo}}: {{release.name}}
+{% endblock %}
+
+
+{% block layout_header_text %}
+{{release.repo}}: {{release.name}}
+{% endblock %}
+
+
+{% block layout_header_description %}
+{{release.version}} - {{release.beta | yesno:"Beta Release,Production Release"}} - {{release.time_created}}
+{% endblock %}
+
+{% block layout_body %}
+
+<article class="slds-card">
+        <div class="slds-card__header slds-grid">
+          <header class="slds-media slds-media--center slds-has-flexi-truncate">
+            <div class="slds-media__figure">
+            </div>
+            <div class="slds-media__body slds-truncate">
+              <h2>
+                <a href="javascript:void(0);" class="slds-text-link--reset">
+                  <span class="slds-text-heading--small">Release Notes</span>
+                </a>
+              </h2>
+            </div>
+          </header>
+        </div>
+        <div class="slds-card__body ">{{release.release_notes}}</div>
+</article>      
+
+<table class="slds-table slds-table--bordered slds-table--cell-buffer">
+    <thead>
+        <tr class="slds-text-title--caps"><th>Build Id</th><th>Plan</th><th>Status</th><th>Date</th></tr>
+    </thead>
+    <tbody>
+        {% for build in release.build_results.all %}
+        <tr>
+            <td>{{build.mbci_build_id}}</td><td>{{build.plan_name}}</td><td>{{build.status}}</td><td>{{build.build_date}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

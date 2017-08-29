@@ -3,9 +3,10 @@ from __future__ import unicode_literals
 from django.db import models
 from django.urls import reverse
 from django.utils import timezone
+from django.conf import settings
 
 from github3 import login
-from django.conf import settings
+from jsonfield import JSONField
 
 from statusite.repository.exceptions import RepoReloadError
 from statusite.repository.utils import parse_times
@@ -20,9 +21,10 @@ class Repository(models.Model):
 
     class Meta:
         ordering = ['name','owner']
+        
 
     def get_absolute_url(self):
-        return reverse('repo_detail', kwargs={'owner': self.owner, 'name': self.name})
+        return reverse('repository:repo_detail', kwargs={'owner': self.owner, 'name': self.name})
 
     def __str__(self):
         return '{}/{}'.format(self.owner, self.name)
@@ -73,6 +75,7 @@ class Release(models.Model):
     time_created = models.DateTimeField()
     time_push_sandbox = models.DateTimeField(null=True, blank=True)
     time_push_prod = models.DateTimeField(null=True, blank=True)
+    tag = models.CharField(max_length=255)
 
     class Meta:
         ordering = ['repo__product_name', '-time_created']
@@ -105,3 +108,5 @@ class Release(models.Model):
 
     def __str__(self):
         return '{}: {}'.format(self.repo.product_name, self.version)
+
+
