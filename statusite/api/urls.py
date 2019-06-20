@@ -2,6 +2,7 @@ from django.conf.urls import url
 
 from statusite.repository import views as repository_views
 from statusite.youtube import views as youtube_views
+from rest_framework.schemas import get_schema_view
 
 
 app_name = "api"
@@ -22,3 +23,6 @@ urlpatterns = [
         name="api-playlist",
     ),
 ]
+
+schema_view = get_schema_view(title="Statusite API")
+urlpatterns += (url(r"^schema/$", schema_view),)
