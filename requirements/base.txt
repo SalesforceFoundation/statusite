@@ -31,7 +31,7 @@ pyasn1-modules==0.2.6
 pycparser==2.19
 python-dateutil==2.8.0
 pytz==2019.2
-redis==3.3.6
+redis==3.3.7
 regex==2019.6.8
 requests==2.22.0
 rsa==4.0
