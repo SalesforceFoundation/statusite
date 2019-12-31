@@ -22,7 +22,7 @@ google-api-python-client==1.7.11
 google-auth==1.10.0
 google-auth-httplib2==0.0.3
 honcho==1.0.1
-httplib2==0.14.0
+httplib2==0.15.0
 idna==2.8
 jwcrypto==0.6.0
 psycopg2-binary==2.8.4
