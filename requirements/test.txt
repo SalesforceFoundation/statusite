@@ -2,7 +2,7 @@
 -r base.txt
 
 black==19.10b0
-coverage==5.0.1
+coverage==5.0.2
 coveralls==1.10.0
 django-test-plus==1.4.0
 factory-boy==2.12.0
