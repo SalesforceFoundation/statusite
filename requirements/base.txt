@@ -23,7 +23,7 @@ google-auth==1.11.2
 google-auth-httplib2==0.0.3
 honcho==1.0.1
 httplib2==0.17.0
-idna==2.8
+idna==2.9
 jwcrypto==0.6.0
 psycopg2-binary==2.8.4
 pyasn1==0.4.8
