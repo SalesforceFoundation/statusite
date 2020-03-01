@@ -35,7 +35,7 @@ redis==3.4.1
 regex==2020.1.8
 requests==2.22.0
 rsa==4.0
-sentry-sdk==0.14.1
+sentry-sdk==0.14.2
 six==1.14.0
 sqlparse==0.3.0
 Unidecode==1.1.1
