@@ -13,4 +13,4 @@ pytest-django==3.8.0
 pytest-factoryboy==2.0.3
 pytest-mock==2.0.0
 pytest-tap==3.0
-responses==0.10.9
+responses==0.10.11
