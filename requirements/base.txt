@@ -25,7 +25,7 @@ honcho==1.0.1
 httplib2==0.17.1
 idna==2.9
 jwcrypto==0.7
-psycopg2-binary==2.8.4
+psycopg2-binary==2.8.5
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pycparser==2.20
