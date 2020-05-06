@@ -3,4 +3,4 @@
 
 django-debug-toolbar==2.2
 django-extensions==2.2.9
-Sphinx==3.0.2
+Sphinx==3.0.3
