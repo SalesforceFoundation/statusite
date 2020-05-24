@@ -36,7 +36,7 @@ regex==2020.5.14
 requests==2.23.0
 rsa==4.0
 sentry-sdk==0.14.4
-six==1.14.0
+six==1.15.0
 sqlparse==0.3.1
 Unidecode==1.1.1
 uritemplate==3.0.1
