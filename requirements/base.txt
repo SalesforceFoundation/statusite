@@ -34,7 +34,7 @@ pytz==2020.1
 redis==3.5.3
 regex==2020.6.7
 requests==2.23.0
-rsa==4.0
+rsa==4.6
 sentry-sdk==0.14.4
 six==1.15.0
 sqlparse==0.3.1
