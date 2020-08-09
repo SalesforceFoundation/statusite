@@ -2,7 +2,7 @@
 #	production that aren't in development.
 -r base.txt
 
-django-anymail==7.1.0
+django-anymail==7.2.1
 django-defender==0.7.0
 django-storages-redux==1.3.3
 gunicorn==20.0.4
