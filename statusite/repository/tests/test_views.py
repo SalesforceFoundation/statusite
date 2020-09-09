@@ -157,4 +157,3 @@ class TestApiRelease:
             "url": "",
             "version": "1.0",
         }
-
