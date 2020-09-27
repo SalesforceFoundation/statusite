@@ -12,5 +12,5 @@ pytest-django==3.9.0
 pytest-factoryboy==2.0.3
 pytest-mock==3.3.1
 pytest-tap==3.1
-regex==2020.7.14
+regex==2020.9.27
 responses==0.12.0
