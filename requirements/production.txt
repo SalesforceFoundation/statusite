@@ -3,8 +3,8 @@
 -r base.txt
 
 django-anymail==8.1
-django-defender==0.7.0
+django-defender==0.8.0
 django-storages-redux==1.3.3
 gunicorn==20.0.4
-newrelic==5.20.1.150
+newrelic==5.22.0.151
 raven==6.10.0
