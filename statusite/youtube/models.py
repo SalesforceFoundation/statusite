@@ -35,5 +35,13 @@ class Playlist(models.Model):
             )
             .execute()
         )
+
+        # Make sure maxres thumbail is present for each item,
+        # by copying the default thumbnail if necessary.
+        for item in results_playlistItems["items"]:
+            thumbnails = item.get("snippet", {}).get("thumbnails", {})
+            if "maxres" not in thumbnails and "default" in thumbnails:
+                thumbnails["maxres"] = thumbnails["default"]
+
         self.json_str = json.dumps(results_playlistItems, default=json_serial)
         self.save()
