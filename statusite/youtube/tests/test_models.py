@@ -1,8 +1,8 @@
 from datetime import datetime
 from unittest import mock
+import json
 
 import pytest
-import pytz
 
 from statusite.youtube.models import Playlist, json_serial
 
@@ -21,13 +21,21 @@ class TestPlaylist:
         }
         youtube_api.playlistItems.return_value.list.return_value.execute.return_value = {
             "items": [
-                {"snippet": {"title": "Item 1", "publishedAt": datetime(2019, 6, 17)}}
+                {
+                    "snippet": {
+                        "title": "Item 1",
+                        "publishedAt": datetime(2019, 6, 17),
+                        "thumbnails": {"default": {"url": "bogus"}},
+                    }
+                }
             ]
         }
         playlist = playlist_factory()
         playlist.reload()
 
         assert playlist.title == "Playlist Title"
+        result = json.loads(playlist.json_str)
+        assert "maxres" in result["items"][0]["snippet"]["thumbnails"]
 
     def test_json_serial_unknown_type(self):
         with pytest.raises(TypeError):

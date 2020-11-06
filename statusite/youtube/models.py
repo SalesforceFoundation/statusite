@@ -39,7 +39,7 @@ class Playlist(models.Model):
         # Make sure maxres thumbail is present for each item,
         # by copying the default thumbnail if necessary.
         for item in results_playlistItems["items"]:
-            thumbnails = item["snippet"]["thumbnails"]
+            thumbnails = item.get("snippet", {}).get("thumbnails", {})
             if "maxres" not in thumbnails and "default" in thumbnails:
                 thumbnails["maxres"] = thumbnails["default"]
 
