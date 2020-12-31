@@ -44,7 +44,7 @@ def github_release_webhook(request):
 
     release_notes = release_event["release"]["body"] or ""
     time_push_sandbox, time_push_prod = parse_times(release_notes)
-    Release.objects.update_or_create(
+    Release.available_objects.update_or_create(
         repo=repo,
         version=release_event["release"]["name"],
         defaults={
