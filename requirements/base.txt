@@ -5,7 +5,7 @@ cffi==1.14.4
 chardet==4.0.0
 click==7.1.2
 croniter==0.3.37
-cryptography==3.3.1
+cryptography==3.4.6
 django-crispy-forms==1.10.0
 django-environ==0.4.5
 django-model-utils==4.1.1
