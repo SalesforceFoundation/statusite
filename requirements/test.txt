@@ -13,4 +13,4 @@ pytest-factoryboy==2.1.0
 pytest-mock==3.4.0
 pytest-tap==3.2
 regex==2020.11.13
-responses==0.12.1
+responses==0.13.2
