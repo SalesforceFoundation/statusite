@@ -7,7 +7,7 @@ coveralls==2.2.0
 django-test-plus==1.4.0
 factory-boy==3.2.0
 flake8==3.8.4
-pytest==6.2.1
+pytest==6.2.4
 pytest-django==4.1.0
 pytest-factoryboy==2.1.0
 pytest-mock==3.4.0
